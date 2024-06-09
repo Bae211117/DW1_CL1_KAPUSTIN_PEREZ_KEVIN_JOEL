@@ -16,6 +16,7 @@ import org.springframework.xml.xsd.XsdSchema;
 @Configuration
 public class WebServiceConfig extends WsConfigurerAdapter {
 
+<<<<<<< HEAD
     @Bean(name = "pregunta2")
     public DefaultWsdl11Definition prestamoWsdl11Definition(XsdSchema prestamoSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
@@ -67,6 +68,8 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 
 
 
+=======
+>>>>>>> origin/master
     @Bean
     public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(ApplicationContext applicationContext) {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
