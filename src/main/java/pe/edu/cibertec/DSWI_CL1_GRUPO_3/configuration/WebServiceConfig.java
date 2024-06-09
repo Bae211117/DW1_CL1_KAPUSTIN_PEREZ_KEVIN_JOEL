@@ -16,7 +16,6 @@ import org.springframework.xml.xsd.XsdSchema;
 @Configuration
 public class WebServiceConfig extends WsConfigurerAdapter {
 
-<<<<<<< HEAD
     @Bean(name = "pregunta2")
     public DefaultWsdl11Definition prestamoWsdl11Definition(XsdSchema prestamoSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
@@ -51,7 +50,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
     public DefaultWsdl11Definition resultadoWsdl11Definition(XsdSchema resultadoSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("ResultadoPort");
-        wsdl11Definition.setLocationUri("/ws/resultado");
+        wsdl11Definition.setLocationUri("/ws/pregunta2-3");
         wsdl11Definition.setTargetNamespace("http://www.cibertec.edu.pe/ws3/objects");
         wsdl11Definition.setSchema(resultadoSchema);
         return wsdl11Definition;
@@ -62,14 +61,26 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return new SimpleXsdSchema(new ClassPathResource("xsd/pregunta2-3.xsd"));
     }
 
+    //Dios ya no más
+    @Bean(name = "pregunta2-4")
+    public DefaultWsdl11Definition compraWsdl11Definition(XsdSchema compraSchema) {
+        DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+        wsdl11Definition.setPortTypeName("CompraPort");
+        wsdl11Definition.setLocationUri("/ws/pregunta2-4");
+        wsdl11Definition.setTargetNamespace("http://www.cibertec.edu.pe/ws4/objects");
+        wsdl11Definition.setSchema(compraSchema);
+        return wsdl11Definition;
+    }
+
+    @Bean
+    public XsdSchema compraSchema() {
+        return new SimpleXsdSchema(new ClassPathResource("xsd/pregunta2-4.xsd"));
+    }
 
 
 
 
 
-
-=======
->>>>>>> origin/master
     @Bean
     public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(ApplicationContext applicationContext) {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
