@@ -6,11 +6,10 @@
 //
 
 
-package pe.edu.cibertec.ws.objects;
+package pe.edu.cibertec.ws5.objects;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -25,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="personaje" type="{http://www.cibertec.edu.pe/ws/objects}personajews"/&gt;
+ *         &lt;element name="anio" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,36 +35,27 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "personaje"
+    "anio"
 })
-@XmlRootElement(name = "getPersonajeResponse")
-public class GetPersonajeResponse {
+@XmlRootElement(name = "AnioRequest")
+public class AnioRequest {
 
-    @XmlElement(required = true)
-    protected Personajews personaje;
+    protected int anio;
 
     /**
-     * Obtiene el valor de la propiedad personaje.
+     * Obtiene el valor de la propiedad anio.
      * 
-     * @return
-     *     possible object is
-     *     {@link Personajews }
-     *     
      */
-    public Personajews getPersonaje() {
-        return personaje;
+    public int getAnio() {
+        return anio;
     }
 
     /**
-     * Define el valor de la propiedad personaje.
+     * Define el valor de la propiedad anio.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Personajews }
-     *     
      */
-    public void setPersonaje(Personajews value) {
-        this.personaje = value;
+    public void setAnio(int value) {
+        this.anio = value;
     }
 
 }

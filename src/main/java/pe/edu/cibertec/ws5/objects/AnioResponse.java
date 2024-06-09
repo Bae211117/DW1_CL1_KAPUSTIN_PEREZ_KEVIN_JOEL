@@ -6,26 +6,26 @@
 //
 
 
-package pe.edu.cibertec.ws2.objects;
+package pe.edu.cibertec.ws5.objects;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para Numero complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="Numero"&gt;
+ * &lt;complexType&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="vocal" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="numero" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="bisiesto" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,54 +35,37 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Numero", propOrder = {
-    "vocal",
-    "numero"
+@XmlType(name = "", propOrder = {
+    "bisiesto"
 })
-public class Numero {
+@XmlRootElement(name = "AnioResponse")
+public class AnioResponse {
 
     @XmlElement(required = true)
-    protected String vocal;
-    protected int numero;
+    protected String bisiesto;
 
     /**
-     * Obtiene el valor de la propiedad vocal.
+     * Obtiene el valor de la propiedad bisiesto.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getVocal() {
-        return vocal;
+    public String getBisiesto() {
+        return bisiesto;
     }
 
     /**
-     * Define el valor de la propiedad vocal.
+     * Define el valor de la propiedad bisiesto.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setVocal(String value) {
-        this.vocal = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad numero.
-     * 
-     */
-    public int getNumero() {
-        return numero;
-    }
-
-    /**
-     * Define el valor de la propiedad numero.
-     * 
-     */
-    public void setNumero(int value) {
-        this.numero = value;
+    public void setBisiesto(String value) {
+        this.bisiesto = value;
     }
 
 }

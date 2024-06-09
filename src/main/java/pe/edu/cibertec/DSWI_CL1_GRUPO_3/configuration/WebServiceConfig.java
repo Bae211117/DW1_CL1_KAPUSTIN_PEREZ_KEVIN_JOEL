@@ -77,7 +77,20 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return new SimpleXsdSchema(new ClassPathResource("xsd/pregunta2-4.xsd"));
     }
 
+    @Bean(name = "preguntafinal")
+    public DefaultWsdl11Definition anioWsdl11Definition(XsdSchema anioSchema) {
+        DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+        wsdl11Definition.setPortTypeName("FinalPort");
+        wsdl11Definition.setLocationUri("/ws/preguntafinal");
+        wsdl11Definition.setTargetNamespace("http://www.cibertec.edu.pe/ws5/objects");
+        wsdl11Definition.setSchema(anioSchema);
+        return wsdl11Definition;
+    }
 
+    @Bean
+    public XsdSchema anioSchema() {
+        return new SimpleXsdSchema(new ClassPathResource("xsd/preguntafinal.xsd"));
+    }
 
 
 

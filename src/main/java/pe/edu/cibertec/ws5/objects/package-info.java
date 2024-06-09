@@ -5,5 +5,5 @@
 // Generado el: 2024.06.08 a las 10:29:14 PM PET 
 //
 
-@jakarta.xml.bind.annotation.XmlSchema(namespace = "http://www.cibertec.edu.pe/ws/objects", elementFormDefault = jakarta.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package pe.edu.cibertec.ws.objects;
+@jakarta.xml.bind.annotation.XmlSchema(namespace = "http://www.cibertec.edu.pe/ws5/objects", elementFormDefault = jakarta.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package pe.edu.cibertec.ws5.objects;

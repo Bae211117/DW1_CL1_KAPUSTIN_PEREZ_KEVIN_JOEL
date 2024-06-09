@@ -6,7 +6,7 @@
 //
 
 
-package pe.edu.cibertec.ws2.objects;
+package pe.edu.cibertec.ws5.objects;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -15,17 +15,17 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para Numero complex type.
+ * <p>Clase Java para Anio complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="Numero"&gt;
+ * &lt;complexType name="Anio"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="vocal" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="numero" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="anio" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="bisiesto" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,54 +35,54 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Numero", propOrder = {
-    "vocal",
-    "numero"
+@XmlType(name = "Anio", propOrder = {
+    "anio",
+    "bisiesto"
 })
-public class Numero {
+public class Anio {
 
+    protected int anio;
     @XmlElement(required = true)
-    protected String vocal;
-    protected int numero;
+    protected String bisiesto;
 
     /**
-     * Obtiene el valor de la propiedad vocal.
+     * Obtiene el valor de la propiedad anio.
+     * 
+     */
+    public int getAnio() {
+        return anio;
+    }
+
+    /**
+     * Define el valor de la propiedad anio.
+     * 
+     */
+    public void setAnio(int value) {
+        this.anio = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad bisiesto.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getVocal() {
-        return vocal;
+    public String getBisiesto() {
+        return bisiesto;
     }
 
     /**
-     * Define el valor de la propiedad vocal.
+     * Define el valor de la propiedad bisiesto.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setVocal(String value) {
-        this.vocal = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad numero.
-     * 
-     */
-    public int getNumero() {
-        return numero;
-    }
-
-    /**
-     * Define el valor de la propiedad numero.
-     * 
-     */
-    public void setNumero(int value) {
-        this.numero = value;
+    public void setBisiesto(String value) {
+        this.bisiesto = value;
     }
 
 }

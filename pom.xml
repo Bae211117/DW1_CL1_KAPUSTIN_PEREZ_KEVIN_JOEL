@@ -87,6 +87,7 @@
 						<source>${project.basedir}/src/main/resources/xsd/pregunta2-2.xsd</source>
 						<source>${project.basedir}/src/main/resources/xsd/pregunta2-3.xsd</source>
 						<source>${project.basedir}/src/main/resources/xsd/pregunta2-4.xsd</source>
+						<source>${project.basedir}/src/main/resources/xsd/preguntafinal.xsd</source>
 
 					</sources>
 					<outputDirectory>src/main/java</outputDirectory>
