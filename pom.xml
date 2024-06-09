@@ -83,6 +83,8 @@
 				<configuration>
 					<sources>
 						<source>${project.basedir}/src/main/resources/xsd/personaje.xsd</source>
+						<source>${project.basedir}/src/main/resources/xsd/pregunta2.xsd</source>
+						<source>${project.basedir}/src/main/resources/xsd/pregunta2-2.xsd</source>
 					</sources>
 					<outputDirectory>src/main/java</outputDirectory>
 					<clearOutputDir>false</clearOutputDir>
