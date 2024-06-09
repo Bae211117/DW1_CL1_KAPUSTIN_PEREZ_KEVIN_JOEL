@@ -6,7 +6,7 @@
 //
 
 
-package pe.edu.cibertec.ws.objects;
+package pe.edu.cibertec.ws3.objects;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -24,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="limite" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,27 +35,27 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "id"
+    "limite"
 })
-@XmlRootElement(name = "getPersonajeRequest")
-public class GetPersonajeRequest {
+@XmlRootElement(name = "CalculoRequest")
+public class CalculoRequest {
 
-    protected int id;
+    protected int limite;
 
     /**
-     * Obtiene el valor de la propiedad id.
+     * Obtiene el valor de la propiedad limite.
      * 
      */
-    public int getId() {
-        return id;
+    public int getLimite() {
+        return limite;
     }
 
     /**
-     * Define el valor de la propiedad id.
+     * Define el valor de la propiedad limite.
      * 
      */
-    public void setId(int value) {
-        this.id = value;
+    public void setLimite(int value) {
+        this.limite = value;
     }
 
 }

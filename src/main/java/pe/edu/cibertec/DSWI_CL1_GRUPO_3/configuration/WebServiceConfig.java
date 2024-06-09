@@ -46,6 +46,23 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return new SimpleXsdSchema(new ClassPathResource("xsd/pregunta2-2.xsd"));
     }
 
+    @Bean(name = "pregunta2-3")
+    public DefaultWsdl11Definition resultadoWsdl11Definition(XsdSchema resultadoSchema) {
+        DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+        wsdl11Definition.setPortTypeName("ResultadoPort");
+        wsdl11Definition.setLocationUri("/ws/resultado");
+        wsdl11Definition.setTargetNamespace("http://www.cibertec.edu.pe/ws3/objects");
+        wsdl11Definition.setSchema(resultadoSchema);
+        return wsdl11Definition;
+    }
+
+    @Bean
+    public XsdSchema resultadoSchema() {
+        return new SimpleXsdSchema(new ClassPathResource("xsd/pregunta2-3.xsd"));
+    }
+
+
+
 
 
 
@@ -67,6 +84,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         wsdl11Definition.setSchema(personajeSchema);
         return wsdl11Definition;
     }
+
     @Bean
     public XsdSchema personajeSchema(){
         return new SimpleXsdSchema(new ClassPathResource("xsd/personaje.xsd"));

@@ -6,7 +6,7 @@
 //
 
 
-package pe.edu.cibertec.ws2.objects;
+package pe.edu.cibertec.ws4.objects;
 
 import jakarta.xml.bind.annotation.XmlRegistry;
 
@@ -14,7 +14,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the pe.edu.cibertec.ws2.objects package. 
+ * generated in the pe.edu.cibertec.ws4.objects package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -30,34 +30,34 @@ public class ObjectFactory {
 
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: pe.edu.cibertec.ws2.objects
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: pe.edu.cibertec.ws4.objects
      * 
      */
     public ObjectFactory() {
     }
 
     /**
-     * Create an instance of {@link NumeroRequest }
+     * Create an instance of {@link CompraRequest }
      * 
      */
-    public NumeroRequest createNumeroRequest() {
-        return new NumeroRequest();
+    public CompraRequest createCompraRequest() {
+        return new CompraRequest();
     }
 
     /**
-     * Create an instance of {@link NumeroResponse }
+     * Create an instance of {@link CompraResponse }
      * 
      */
-    public NumeroResponse createNumeroResponse() {
-        return new NumeroResponse();
+    public CompraResponse createCompraResponse() {
+        return new CompraResponse();
     }
 
     /**
-     * Create an instance of {@link Numero }
+     * Create an instance of {@link Compra }
      * 
      */
-    public Numero createNumero() {
-        return new Numero();
+    public Compra createCompra() {
+        return new Compra();
     }
 
 }

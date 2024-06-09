@@ -6,7 +6,7 @@
 //
 
 
-package pe.edu.cibertec.ws.objects;
+package pe.edu.cibertec.ws4.objects;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -24,7 +24,8 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="precioUnitario" type="{http://www.w3.org/2001/XMLSchema}double"/&gt;
+ *         &lt;element name="cantidad" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,27 +36,45 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "id"
+    "precioUnitario",
+    "cantidad"
 })
-@XmlRootElement(name = "getPersonajeRequest")
-public class GetPersonajeRequest {
+@XmlRootElement(name = "CompraRequest")
+public class CompraRequest {
 
-    protected int id;
+    protected double precioUnitario;
+    protected int cantidad;
 
     /**
-     * Obtiene el valor de la propiedad id.
+     * Obtiene el valor de la propiedad precioUnitario.
      * 
      */
-    public int getId() {
-        return id;
+    public double getPrecioUnitario() {
+        return precioUnitario;
     }
 
     /**
-     * Define el valor de la propiedad id.
+     * Define el valor de la propiedad precioUnitario.
      * 
      */
-    public void setId(int value) {
-        this.id = value;
+    public void setPrecioUnitario(double value) {
+        this.precioUnitario = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad cantidad.
+     * 
+     */
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    /**
+     * Define el valor de la propiedad cantidad.
+     * 
+     */
+    public void setCantidad(int value) {
+        this.cantidad = value;
     }
 
 }

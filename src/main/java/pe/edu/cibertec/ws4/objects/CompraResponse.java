@@ -6,10 +6,11 @@
 //
 
 
-package pe.edu.cibertec.ws.objects;
+package pe.edu.cibertec.ws4.objects;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -24,7 +25,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="detalleCompra" type="{http://www.cibertec.edu.pe/ws4/objects}Compra"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,27 +36,36 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "id"
+    "detalleCompra"
 })
-@XmlRootElement(name = "getPersonajeRequest")
-public class GetPersonajeRequest {
+@XmlRootElement(name = "CompraResponse")
+public class CompraResponse {
 
-    protected int id;
+    @XmlElement(required = true)
+    protected Compra detalleCompra;
 
     /**
-     * Obtiene el valor de la propiedad id.
+     * Obtiene el valor de la propiedad detalleCompra.
      * 
+     * @return
+     *     possible object is
+     *     {@link Compra }
+     *     
      */
-    public int getId() {
-        return id;
+    public Compra getDetalleCompra() {
+        return detalleCompra;
     }
 
     /**
-     * Define el valor de la propiedad id.
+     * Define el valor de la propiedad detalleCompra.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Compra }
+     *     
      */
-    public void setId(int value) {
-        this.id = value;
+    public void setDetalleCompra(Compra value) {
+        this.detalleCompra = value;
     }
 
 }

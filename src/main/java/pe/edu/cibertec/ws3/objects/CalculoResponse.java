@@ -6,13 +6,12 @@
 //
 
 
-package pe.edu.cibertec.ws.objects;
+package pe.edu.cibertec.ws3.objects;
 
 import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -27,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="personajes" type="{http://www.cibertec.edu.pe/ws/objects}personajews" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="resultados" type="{http://www.cibertec.edu.pe/ws3/objects}Resultado" maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,41 +37,40 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "personajes"
+    "resultados"
 })
-@XmlRootElement(name = "getPersonajesResponse")
-public class GetPersonajesResponse {
+@XmlRootElement(name = "CalculoResponse")
+public class CalculoResponse {
 
-    @XmlElement(required = true)
-    protected List<Personajews> personajes;
+    protected List<Resultado> resultados;
 
     /**
-     * Gets the value of the personajes property.
+     * Gets the value of the resultados property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a <CODE>set</CODE> method for the personajes property.
+     * This is why there is not a <CODE>set</CODE> method for the resultados property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getPersonajes().add(newItem);
+     *    getResultados().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Personajews }
+     * {@link Resultado }
      * 
      * 
      */
-    public List<Personajews> getPersonajes() {
-        if (personajes == null) {
-            personajes = new ArrayList<Personajews>();
+    public List<Resultado> getResultados() {
+        if (resultados == null) {
+            resultados = new ArrayList<Resultado>();
         }
-        return this.personajes;
+        return this.resultados;
     }
 
 }
